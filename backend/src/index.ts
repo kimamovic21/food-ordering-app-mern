@@ -1,6 +1,8 @@
 import express, { type Request, type Response } from 'express';
+import { connectDB } from '../database/connect.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import chalk from 'chalk';
 
 dotenv.config();
 
@@ -15,6 +17,8 @@ app.get('/', (req: Request, res: Response) => {
   res.json({ message: 'Food Ordering App Backend is running' });
 });
 
+await connectDB();
+
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(chalk.green(`Server is running on port ${PORT}`));
 });

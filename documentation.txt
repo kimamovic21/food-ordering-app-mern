@@ -29,3 +29,17 @@ Frontend setup
 -update component App.tsx
 -create folder .vscode and settings.json file
 -type command: npm run dev
+
+
+Database setup
+
+-open link: https://www.mongodb.com/products/platform/atlas-database
+-create new database
+-in folder backend, in .env file create variable MONGODB_CONNECTION_STRING
+-in index.ts file import object mongoose form package mongoose
+-invoke function mongoose.connect()
+-open link: https://www.npmjs.com/package/chalk
+-type command: npm i chalk
+-create folder database and connect.ts file
+-in connect.ts file create and export async function connectDB()
+-in index.ts file import and invoke function connectDB()
