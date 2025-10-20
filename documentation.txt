@@ -1,10 +1,10 @@
 Food Ordering App - MERN stack
 
 
+
 Backend setup
 
-
--create folder backend and frontend
+-create folders backend and frontend
 -enter folder backend and type command npm init -y
 -type command: npm i express cors dotenv mongodb mongoose
 -type command: npm i --save-dev ts-node typescript nodemon @types/express @types/cors @types/node
@@ -17,3 +17,15 @@ Backend setup
 -update package.json file with "type": "module"
 -create nodemon.json file
 -update tsconfig.ts file
+
+
+Frontend setup
+
+-open link: https://ui.shadcn.com
+-open link: https://ui.shadcn.com/docs/installation/vite
+-type command: cd frontend 
+-in folder frontend type commands from documentation
+-remove App.css file
+-update component App.tsx
+-create folder .vscode and settings.json file
+-type command: npm run dev
