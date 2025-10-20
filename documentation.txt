@@ -17,6 +17,7 @@ Backend setup
 -update package.json file with "type": "module"
 -create nodemon.json file
 -update tsconfig.ts file
+-open route: http://localhost:3000
 
 
 Frontend setup
@@ -29,6 +30,7 @@ Frontend setup
 -update component App.tsx
 -create folder .vscode and settings.json file
 -type command: npm run dev
+-open route: http://localhost:5173
 
 
 Database setup
@@ -43,3 +45,21 @@ Database setup
 -create folder database and connect.ts file
 -in connect.ts file create and export async function connectDB()
 -in index.ts file import and invoke function connectDB()
+-open route: http://localhost:3000
+
+
+React Router setup
+
+-open link: https://reactrouter.com
+-open link: https://www.npmjs.com/package/react-router-dom
+-type command: cd frontend 
+-type command: npm i react-router-dom
+-in component main.tsx import component BrowserRouter as Router
+-in tsx add component Router
+-create component AppRoutes.tsx
+-in component AppRoutes.tsx import components Routes, Route and Navigate from package react-router-dom
+-in component main.tsx import component AppRoutes from component AppRoutes.tsx
+-in component Router add component AppRoutes
+-open route: http://localhost:5173
+-open route: http://localhost:5173/user-profile
+-open route: http://localhost:5173/test
