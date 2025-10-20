@@ -1,0 +1,19 @@
+Food Ordering App - MERN stack
+
+
+Backend setup
+
+
+-create folder backend and frontend
+-enter folder backend and type command npm init -y
+-type command: npm i express cors dotenv mongodb mongoose
+-type command: npm i --save-dev ts-node typescript nodemon @types/express @types/cors @types/node
+-in package.json file update object scripts
+-type command: npx tsc --init
+-create folder src and index.ts file
+-in index.ts file add basic Node.js Express setup
+-create files .env and .env.example
+-type command: npm run dev
+-update package.json file with "type": "module"
+-create nodemon.json file
+-update tsconfig.ts file
