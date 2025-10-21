@@ -94,3 +94,17 @@ Desktop nav
 
 -in folder shared create folder MainNav.tsx
 -in component Header.tsx import component MainNav from component MainNav.tsx
+-open route: http://localhost:5173
+
+
+Responsive landing page
+
+-in folder shared create component Hero.tsx 
+-in folder assets add three images
+-in component layout.tsx import component Hero from component Hero.tsx
+-create folder pages and component HomePage.tsx
+-in component HomePage.tsx create HTML elements with Tailwind CSS classes
+-in component AppRoutes.tsx import component HomePage from component HomePage.tsx
+-in folder shared create component Footer.tsx
+-in component layout.tsx import component Footer from component Footer.tsx
+-open route: http://localhost:5173
