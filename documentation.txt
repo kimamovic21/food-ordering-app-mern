@@ -74,3 +74,17 @@ Layout and header
 -import component Link from package react-router-dom
 -in component layout.tsx import component Header from component Header.tsx
 -open route: http://localhost:5173
+
+
+Mobile nav
+
+-open link: https://ui.shadcn.com/docs/components/sheet
+-type command: npx shadcn@latest add sheet
+-open link: https://lucide.dev/guide/packages/lucide-react
+-type command: npm i lucide-react
+-open link: https://ui.shadcn.com/docs/components/separator
+-type command: npx shadcn@latest add separator
+-in folder shared create component MobileNav.tsx
+-in component MobileNav.tsx import components from component sheet.tsx
+-in component Header.tsx import component MobileNav from component MobileNav.tsx
+-open route: http://localhost:5173
