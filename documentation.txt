@@ -88,3 +88,9 @@ Mobile nav
 -in component MobileNav.tsx import components from component sheet.tsx
 -in component Header.tsx import component MobileNav from component MobileNav.tsx
 -open route: http://localhost:5173
+
+
+Desktop nav
+
+-in folder shared create folder MainNav.tsx
+-in component Header.tsx import component MainNav from component MainNav.tsx
