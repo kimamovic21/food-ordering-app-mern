@@ -63,3 +63,14 @@ React Router setup
 -open route: http://localhost:5173
 -open route: http://localhost:5173/user-profile
 -open route: http://localhost:5173/test
+
+
+Layout and header
+
+-create folder Layouts and component layout.tsx
+-in component layout.tsx create HTML elements with Tailwind CSS classes
+-create folder shared and component Header.tsx
+-in component Header.tsx create HTML elements with Tailwind CSS classes
+-import component Link from package react-router-dom
+-in component layout.tsx import component Header from component Header.tsx
+-open route: http://localhost:5173
