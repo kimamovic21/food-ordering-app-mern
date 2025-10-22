@@ -108,3 +108,26 @@ Responsive landing page
 -in folder shared create component Footer.tsx
 -in component layout.tsx import component Footer from component Footer.tsx
 -open route: http://localhost:5173
+
+
+Auth0 setup
+
+-open link: https://auth0.com
+-open option Applications
+-create new app
+-open link: https://www.npmjs.com/package/@auth0/auth0-react
+-type command: npm i @auth0/auth0-react
+-create folder auth and component Auth0ProviderWithNavigate.tsx
+-in component Auth0ProviderWithNavigate.tsx import component Auth0Provider, types AppState type User from package @auth0/auth0-react
+-in tsx add component Auth0Provider with open and close tags
+-add to component Auth0Provider props
+-create files .env.local and .env.local.example
+-in .env.local file add three env variables
+-in component main.tsx import component Auth0ProviderWithNavigate from component Auth0ProviderWithNavigate.tsx
+-in component MainNav.tsx import and invoke function useAuth0() from package @auth0/auth0-react
+-destructure function loginWithRedirect from function useAuth0()
+-in tsx add to component Button prop onClick
+-type command: npm run dev
+-open route: http://localhost:5173 and click Login button
+-click Continue with Google button
+-open route: http://localhost:5173 and console to see logged in user
