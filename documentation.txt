@@ -131,3 +131,25 @@ Auth0 setup
 -open route: http://localhost:5173 and click Login button
 -click Continue with Google button
 -open route: http://localhost:5173 and console to see logged in user
+
+
+Authenticated User Links
+
+-open link: https://ui.shadcn.com/docs/components/dropdown-menu
+-type command: npx shadcn@latest add dropdown-menu
+-in component MainNav.tsx destructure variable isAuthenticated from function useAuth0()
+-in folder shared create component UsernameMenu.tsx
+-in component UsernameMenu.tsx import components from component dropdown-menu.tsx
+-import and invoke function useAuth0()
+-destructure variable user and function logout from function useAuth0()
+-in tsx add components for dropdown menu
+-in component MainNav.tsx import component UsernameMenu from component UsernameMenu.tsx
+-in tsx add ternary condition for variable isAuthenticated ?
+-type command: npm run dev
+-open route: http://localhost:5173 and console to see logged in user
+-click Logout button
+-in component MobileNav.tsx import and invoke function useAuth0()
+-in tsx add ternary condition for variable isAuthenticated ?
+-in folder shared create component MobileNavLinks.tsx 
+-in component MobileNavLinks.tsx import and invoke function useAuth0()
+-in component MobileNav.tsx import component MobileNavLinks from component MobileNavLinks.tsx 
