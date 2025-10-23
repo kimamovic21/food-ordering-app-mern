@@ -159,3 +159,14 @@ Creating User Model
 
 -in folder backend, in folder src create folder models and user.ts file
 -in user.ts file create and export variable const User 
+
+
+Creating user API
+
+-in index.ts file invoke function app.use() for route '/api/v1/my/user'
+-create folder routes and user.route.ts file
+-create folder controllers and user.controller.ts file
+-in user.controller.ts file create and export async function createCurrentUser()
+-in user.route.ts file import function createCurrentUser
+-invoke function router.post() for function createCurrentUser
+-open Postman and test endpoint {{BASE_URL}}/api/v1/my/user with POST method

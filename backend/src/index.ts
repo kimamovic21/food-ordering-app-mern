@@ -3,6 +3,7 @@ import { connectDB } from '../database/connect.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import chalk from 'chalk';
+import myUserRoutes from './routes/user.route.js';
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 await connectDB();
+
+app.use('/api/v1/my/user', myUserRoutes);
 
 app.listen(PORT, () => {
   console.log(chalk.green(`Server is running on port ${PORT}`));
