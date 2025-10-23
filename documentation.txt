@@ -170,3 +170,25 @@ Creating user API
 -in user.route.ts file import function createCurrentUser
 -invoke function router.post() for function createCurrentUser
 -open Postman and test endpoint {{BASE_URL}}/api/v1/my/user with POST method
+-open MongoDB to see created user
+
+
+Creating User Request
+
+-open link: https://www.npmjs.com/package/react-query
+-type command: npm i react-query --legacy-peer-deps
+-in component main.tsx import function QueryClient and component QueryClientProvider
+-create variable const queryClient
+-in tsx add component QueryClientProvider with prop client
+-create folder api and component MyUserApi.tsx
+-in component MyUserApi.tsx import and invoke function useMutation from package react-query
+-create variable const API_BASE_URL
+-create type CreateUserRequest
+-create function useCreateMyUser()
+-add object return statement
+-in component Auth0ProviderWithNavigate.tsx import and invoke function useCreateMyUser()
+-update function onRedirectCallback()
+-in .env.local file create env variable VITE_API_BASE_URL
+-type command: npm run dev
+-open route: http://localhost:5173 and login
+-open MongoDB to see created user
