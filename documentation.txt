@@ -153,3 +153,9 @@ Authenticated User Links
 -in folder shared create component MobileNavLinks.tsx 
 -in component MobileNavLinks.tsx import and invoke function useAuth0()
 -in component MobileNav.tsx import component MobileNavLinks from component MobileNavLinks.tsx 
+
+
+Creating User Model
+
+-in folder backend, in folder src create folder models and user.ts file
+-in user.ts file create and export variable const User 
