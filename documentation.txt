@@ -192,3 +192,17 @@ Creating User Request
 -type command: npm run dev
 -open route: http://localhost:5173 and login
 -open MongoDB to see created user
+
+
+Auth0 Access Token
+
+-in folder auth create component AuthCallbackPage.tsx
+-in component component AuthCallbackPage.tsx import and invoke functions useAuth0(), useCreateMyUser() and useEffect()
+-import and invoke functions useNavigate(), useRef() and useEffect()
+-in component AppRoutes.tsx import component AuthCallbackPage.tsx
+-in component Auth0ProviderWithNavigate.tsx import and invoke function useNavigate()
+-in component MyUserApi.tsx import and invoke function useAuth0()
+-create variable const accessToken
+-in object headers add option Authorization
+-open route: http://localhost:5173
+-in your browser open console and network tab to see access token
