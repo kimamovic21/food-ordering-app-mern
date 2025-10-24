@@ -206,3 +206,25 @@ Auth0 Access Token
 -in object headers add option Authorization
 -open route: http://localhost:5173
 -in your browser open console and network tab to see access token
+
+
+Validate access token
+
+-open Auth0 dashboard and select option Applications
+-select option APIs
+-click button Create API
+-copy code from documentation
+-in folder backend create folder middlewares
+-open link: https://www.npmjs.com/package/express-oauth2-jwt-bearer
+-type command: npm i express-oauth2-jwt-bearer
+-in folder middlewares create auth.middleware.ts file
+-in auth.middleware.ts file create and export function jwtCheck()
+-in .env file create variables AUTH0_AUDIENCE and AUTH0_ISSUER_BASE_URL
+-in user.routes.ts file import function jwtCheck from auth.middleware.ts file
+-in function post() add function jwtCheck as middleware
+-open Postman and test endpoint {{BASE_URL}}/api/v1/my/user with POST method
+-in folder frontend, in .env.local file create variable VITE_AUTH0_AUDIENCE
+-in component Auth0ProviderWithNavigate.tsx create variable const audience
+-update if condition and object authorizationParams
+-open route: http://localhost:5173 and login
+-in your browser open console and network tab to see access token
