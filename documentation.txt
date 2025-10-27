@@ -253,3 +253,29 @@ Update user profile API
 -import functions body and validationResult from package express-validator
 -create async function handleValidationErrors()
 -in user.routes.ts file import array validateMyUserRequest
+
+
+User profile form
+
+-open link: https://ui.shadcn.com/docs/components/form
+-open link: https://zod.dev
+-open link: https://react-hook-form.com
+-open link: https://www.npmjs.com/package/@hookform/resolvers
+-type command: npx shadcn@latest add form --legacy-peer-deps
+-type command: npm i @radix-ui/react-label @radix-ui/react-slot react-hook-form @hookform/resolvers zod --legacy-peer-deps
+-in folder ui create component form.tsx
+-in component form.tsx add code from documentation
+-type command: npx shadcn@latest add input
+-open link: https://ui.shadcn.com/docs/components/label
+-type command: npm i @radix-ui/react-label
+-create component label.tsx
+-in component label.tsx add code from documentation
+-create folders forms and user-profile-form
+-in folder user-profile-form create component UserProfileForm.tsx
+-in component UserProfileForm.tsx import add logic for form validation
+-create component LoadingButton.tsx
+-in component UserProfileForm.tsx import component LoadingButton
+-in folder pages create component UserProfilePage.tsx
+-in component AppRoutes.tsx import component UserProfilePage
+-in tsx update component Route for path 'user-profile'
+-open route: http://localhost:5173/user-profile
