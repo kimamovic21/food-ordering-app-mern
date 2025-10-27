@@ -1,5 +1,5 @@
 import express, { type Request, type Response } from 'express';
-import { connectDB } from '../database/connect.js';
+import connectDB from '../database/connect.ts';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import chalk from 'chalk';

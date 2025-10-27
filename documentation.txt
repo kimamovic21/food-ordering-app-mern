@@ -228,3 +228,28 @@ Validate access token
 -update if condition and object authorizationParams
 -open route: http://localhost:5173 and login
 -in your browser open console and network tab to see access token
+
+
+Update user profile API
+
+-open link: https://www.npmjs.com/package/tsx
+-type command: npm i tsx --save-dev
+-update command dev in package.json file
+-update tsconfig.json file
+-in user.routes.ts file invoke function router.put() for updating user information
+-in user.controller.ts file create and export async function updateCurrentUser()
+-in user.routes.ts file import function updateCurrentUser
+-in auth.middleware.ts file create and export async function jwtParse()
+-open link: https://www.npmjs.com/package/jsonwebtoken
+-type command: npm i jsonwebtoken
+-open link: https://www.npmjs.com/package/@types/jsonwebtoken
+-type command: npm i @types/jsonwebtoken --save-dev
+-in auth.middleware.ts file create type declare global 
+-in user.routes.ts file import function jwtParse
+-in folder middlewares create validation.middleware.ts file
+-open link: https://www.npmjs.com/package/express-validator
+-type command: npm i express-validator
+-in validation.middleware.ts file create and export array validateMyUserRequest 
+-import functions body and validationResult from package express-validator
+-create async function handleValidationErrors()
+-in user.routes.ts file import array validateMyUserRequest

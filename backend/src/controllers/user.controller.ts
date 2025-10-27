@@ -21,3 +21,27 @@ export async function createCurrentUser(req: Request, res: Response) {
     res.status(500).json({ message: 'Error creating user!' });
   };
 };
+
+export async function updateCurrentUser(req: Request, res: Response) {
+  try {
+    const { name, addressLine1, country, city } = req.body;
+
+    const user = await User.findById(req.userId);
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found!' });
+    };
+
+    user.name = name;
+    user.addressLine1 = addressLine1;
+    user.city = city;
+    user.country = country;
+
+    await user.save();
+
+    res.send(user);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Error updating user!' });
+  };
+};
