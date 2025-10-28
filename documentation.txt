@@ -311,3 +311,14 @@ Get user API
 -import and invoke function useQuery()
 -in component UserProfilePage.tsx import and invoke function useGetMyUser()
 -open route: http://localhost:5173/user-profile
+
+
+Pre-populate user form
+
+-create types.ts file and type User
+-in component MyUserApi.tsx import type User
+-update component UserProfilePage.tsx with if condition and new prop
+-in component UserProfileForm.tsx import type User and update type Prop
+-add to function UserProfileForm() new prop 
+-import and invoke function useEffect()
+-open route: http://localhost:5173/user-profile and update user
