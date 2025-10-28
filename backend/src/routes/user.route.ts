@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import {
+  getCurrentUser,
   createCurrentUser,
   updateCurrentUser
 } from '../controllers/user.controller.js';
@@ -11,6 +12,12 @@ import { validateMyUserRequest } from '../middlewares/validation.middleware.ts';
 
 const router = Router();
 
+router.get(
+  '/',
+  jwtCheck,
+  jwtParse,
+  getCurrentUser
+);
 router.post(
   '/',
   jwtCheck,

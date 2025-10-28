@@ -1,6 +1,21 @@
 import { type Request, type Response } from 'express';
 import User from '../models/user.js';
 
+export async function getCurrentUser(req: Request, res: Response) {
+  try {
+    const currentUser = await User.findOne({ _id: req.userId });
+
+    if (!currentUser) {
+      return res.status(404).json({ message: 'User not found!' });
+    };
+
+    res.json(currentUser);
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: 'Something went wrong!' });
+  };
+};
+
 export async function createCurrentUser(req: Request, res: Response) {
   try {
     const { auth0Id } = req.body;

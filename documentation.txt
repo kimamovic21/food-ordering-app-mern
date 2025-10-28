@@ -300,3 +300,14 @@ Toast notifications
 -in component MyUserApi.tsx import function toast from package sonner
 -add conditions if for function toast()
 -open route: http://localhost:5173/user-profile and update user
+
+
+Get user API
+
+-in user.controller.ts file create and export async function getCurrentUser()
+-in user.route.ts file import function getCurrentUser
+-invoke function router.get() for function getCurrentUser
+-in component MyUserApi.tsx create and export function useGetMyUser()
+-import and invoke function useQuery()
+-in component UserProfilePage.tsx import and invoke function useGetMyUser()
+-open route: http://localhost:5173/user-profile
