@@ -288,3 +288,15 @@ Update user profile request
 -in component UserProfilePage.tsx import and invoke function useUpdateMyUser()
 -in tsx add to component UserProfileForm props onSave and isLoading
 -open route: http://localhost:5173/user-profile and update user
+
+
+Toast notifications
+
+-open link: https://ui.shadcn.com/docs/components/sonner
+-open link: https://www.npmjs.com/package/sonner
+-type command: npm install sonner next-themes --legacy-peer-deps
+-in folder ui create component sonner.tsx
+-in component main.tsx import component Toaster from package sonner
+-in component MyUserApi.tsx import function toast from package sonner
+-add conditions if for function toast()
+-open route: http://localhost:5173/user-profile and update user
