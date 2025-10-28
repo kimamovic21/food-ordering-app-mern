@@ -322,3 +322,13 @@ Pre-populate user form
 -add to function UserProfileForm() new prop 
 -import and invoke function useEffect()
 -open route: http://localhost:5173/user-profile and update user
+
+
+Protect user profile route
+
+-open route: http://localhost:5173/user-profile
+-in folder auth create component ProtectedRoute.tsx
+-in component ProtectedRoute.tsx import function useAuth0, components Navigate i Outlet
+-in component AppRoutes.tsx import component ProtectedRoute
+-in tsx add component Route for component ProtectedRoute
+-open route: http://localhost:5173/user-profile
