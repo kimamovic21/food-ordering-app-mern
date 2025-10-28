@@ -26,7 +26,7 @@ export async function jwtParse(
   res: Response,
   next: NextFunction
 ) {
-  const { authorization } = req.body;
+  const { authorization } = req.headers;
 
   if (!authorization || !authorization.startsWith('Bearer ')) {
     return res.sendStatus(401);

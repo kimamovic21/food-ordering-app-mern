@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import LoadingButton from './LoadingButton';
 import { Button } from '@/components/ui/button';
+import LoadingButton from './LoadingButton';
 
 const formSchema = z.object({
   email: z.string().optional(),
@@ -24,6 +24,13 @@ type Props = {
 const UserProfileForm = ({ onSave, isLoading }: Props) => {
   const form = useForm<UserFormData>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: '',
+      name: '',
+      addressLine1: '',
+      city: '',
+      country: '',
+    }
   });
 
   return (

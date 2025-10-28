@@ -279,3 +279,12 @@ User profile form
 -in component AppRoutes.tsx import component UserProfilePage
 -in tsx update component Route for path 'user-profile'
 -open route: http://localhost:5173/user-profile
+
+
+Update user profile request 
+
+-in component MyUserApi.tsx create and export function useUpdateMyUser()
+-create type UpdateMyUserRequest
+-in component UserProfilePage.tsx import and invoke function useUpdateMyUser()
+-in tsx add to component UserProfileForm props onSave and isLoading
+-open route: http://localhost:5173/user-profile and update user
