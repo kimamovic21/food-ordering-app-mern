@@ -362,3 +362,19 @@ Backend deploy to Render
 -click button Deploy Web Service
 -open link: https://food-ordering-app-mern-backend.onrender.com
 -open link: https://food-ordering-app-mern-backend.onrender.com/health
+
+
+Frontend deployment to Render
+
+-open link: https://render.com
+-click button: Static Site
+-add env variables
+-click button: Deploy Static Site
+-open link: https://auth0.com
+-open Applications settings
+-update allowed callback URLs and allowed logout URLs
+-downgrade React version to 18
+-open link: https://food-ordering-app-mern-frontend.onrender.com
+-select option Redirects/Rewrites
+-add to Source /*
+-add to Destination /index.html
