@@ -1,4 +1,5 @@
 import express, { type Request, type Response } from 'express';
+import { v2 as cloudinary } from 'cloudinary';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import chalk from 'chalk';
@@ -6,6 +7,12 @@ import connectDB from './database/connect.js';
 import myUserRoutes from './routes/user.route.js';
 
 dotenv.config();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 const app = express();
 

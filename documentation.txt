@@ -378,3 +378,18 @@ Frontend deployment to Render
 -select option Redirects/Rewrites
 -add to Source /*
 -add to Destination /index.html
+
+
+Cloudinary setup 
+
+-open link: https://cloudinary.com
+-open link: https://www.npmjs.com/package/cloudinary
+-type command: npm i cloudinary
+-open link: https://www.npmjs.com/package/multer
+-type command: npm i multer
+-open link: https://www.npmjs.com/package/@types/multer
+-type command: npm i @types/multer --save-dev
+-in index.ts file import object cloudinary from package cloudinary
+-invoke function cloudinary.config()
+-in .env file create new three variables
+-type command: npm run dev
