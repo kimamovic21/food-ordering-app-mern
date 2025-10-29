@@ -345,3 +345,20 @@ Backend deployment
 -type command: npm start
 -open folder dist
 -open route: http://localhost:3000/health
+
+
+Backend deploy to Render
+
+-open MongoDB Atlas and create new database
+-open link: https://www.npmjs.com/package/mongodb
+-open link: https://www.mongodb.com/docs/drivers/node/current/#introduction
+-in .env file update variable MONGODB_CONNECTION_STRING
+-open link: https://www.mongodb.com/docs/atlas/security/ip-access-list/
+-type command: npm i mongodb
+-update function in connect.ts file
+-open link: https://render.com
+-create new Service
+-add env variables in you project
+-click button Deploy Web Service
+-open link: https://food-ordering-app-mern-backend.onrender.com
+-open link: https://food-ordering-app-mern-backend.onrender.com/health

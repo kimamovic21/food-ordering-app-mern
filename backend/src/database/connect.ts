@@ -3,7 +3,16 @@ import chalk from 'chalk';
 
 async function connectDB(): Promise<void> {
   try {
-    await mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string);
+    const connectionString = process.env.MONGODB_CONNECTION_STRING;
+
+    if (!connectionString) {
+      throw new Error('MONGODB_CONNECTION_STRING is not defined in .env file');
+    };
+
+    console.log(chalk.blue('Connecting to MongoDB...'));
+
+    await mongoose.connect(connectionString);
+
     console.log(chalk.green.bold('Successfully connected to MongoDB!'));
   } catch (err) {
     console.error(
