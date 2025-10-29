@@ -332,3 +332,16 @@ Protect user profile route
 -in component AppRoutes.tsx import component ProtectedRoute
 -in tsx add component Route for component ProtectedRoute
 -open route: http://localhost:5173/user-profile
+
+
+Backend deployment
+
+-in index.ts file invoke function app.get() for route '/health'
+-in tsconfig.json file add option outDir
+-in package.json file add commands build and start
+-update imports for files in folder backend
+-move folder database in folder src
+-type command: npm run build
+-type command: npm start
+-open folder dist
+-open route: http://localhost:3000/health

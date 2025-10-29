@@ -8,7 +8,7 @@ import {
   jwtCheck,
   jwtParse
 } from '../middlewares/auth.middleware.js';
-import { validateMyUserRequest } from '../middlewares/validation.middleware.ts';
+import { validateMyUserRequest } from '../middlewares/validation.middleware.js';
 
 const router = Router();
 
