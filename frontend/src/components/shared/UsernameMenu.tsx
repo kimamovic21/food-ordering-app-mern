@@ -23,7 +23,19 @@ const UsernameMenu = () => {
 
       <DropdownMenuContent>
         <DropdownMenuLabel>
-          <Link to='/user-profile' className='font-bold hover:text-orange-500'>
+          <Link
+            to='/manage-restaurant'
+            className='font-bold hover:text-orange-500'
+          >
+            Manage Restaurant
+          </Link>
+        </DropdownMenuLabel>
+
+        <DropdownMenuLabel>
+          <Link
+            to='/user-profile'
+            className='font-bold hover:text-orange-500'
+          >
             User Profile
           </Link>
         </DropdownMenuLabel>

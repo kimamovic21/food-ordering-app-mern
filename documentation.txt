@@ -410,3 +410,40 @@ Create Restaurant API
 -in validation.ts file create and export variable const validateMyRestaurantRequest
 -in restaurant.route.ts file import variable validateMyRestaurantRequest
 -open Postman and test endpoint {{BASE_URL}}/api/v1/my/restaurant with POST method
+
+
+Create restaurant form
+
+-in folder forms create folder manage-restaurant-form
+-in folder manage-restaurant-form create component ManageRestaurantForm.tsx
+-in component ManageRestaurantForm.tsx add logic for form validation
+-create component DetailsSection.tsx
+-in component DetailsSection.tsx import function useFormContext and shadcn components from folder ui
+-in component ManageRestaurantForm.tsx import component DetailsSection
+-in folder pages create component ManageRestaurantPage.tsx
+-in component ManageRestaurantPage.tsx import component ManageRestaurantForm
+-in component AppRoutes.tsx import component ManageRestaurantPage.tsx
+-add component Route for component ManageRestaurantPage
+-update component UsernameMenu.tsx
+-open route: http://localhost:5173/manage-restaurant
+-in folder manage-restaurant-form create component CuisinesSection.tsx
+-create folder config and restaurant-options-config.ts file
+-in restaurant-options-config.ts file create and export variable array cuisineList
+-in component CuisinesSection.tsx import variable cuisineList
+-create component CuisineCheckbox.tsx 
+-in component CuisinesSection.tsx import component CuisineCheckbox
+-open link: https://ui.shadcn.com/docs/components/checkbox
+-type command: npm i @radix-ui/react-checkbox
+-in folder ui create component checkbox.tsx
+-in component CuisineCheckbox.tsx import component Checkbox from component checkbox.tsx
+-in component ManageRestaurantForm.tsx import component CuisinesSection
+-in folder manage-restaurant-form.tsx create component MenuSection.tsx
+-open route: http://localhost:5173/manage-restaurant
+-create component MenuItemInput.tsx 
+-in component MenuSection.tsx import component MenuItemInput
+-in component ManageRestaurantForm.tsx import component MenuSection
+-create component ImageSection.tsx
+-in component ManageRestaurantForm.tsx import component ImageSection
+-create component LoadingButton.tsx
+-in component ManageRestaurantForm.tsx import component LoadingButton
+-open route: http://localhost:5173/manage-restaurant and click button Submit
