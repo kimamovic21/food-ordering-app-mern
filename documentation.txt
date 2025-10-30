@@ -393,3 +393,20 @@ Cloudinary setup
 -invoke function cloudinary.config()
 -in .env file create new three variables
 -type command: npm run dev
+
+
+Create Restaurant API
+
+-in folder controllers create restaurant.controller.ts file
+-in restaurant.controller.ts file create and export async function createMyRestaurant()
+-in folder routes create restaurant.route.ts file
+-in restaurant.route.ts file add route setup for restaurant routes
+-import function createMyRestaurant
+-in folder models create restaurant.ts file
+-in restaurant.ts file create and export model Restaurant
+-in index.ts file import variable myRestaurantRoute from restaurant.route.ts file
+-invoke function app.use() for variable myRestaurantRoute
+-in restaurant.route.ts file import functions jwtCheck and jwtParse
+-in validation.ts file create and export variable const validateMyRestaurantRequest
+-in restaurant.route.ts file import variable validateMyRestaurantRequest
+-open Postman and test endpoint {{BASE_URL}}/api/v1/my/restaurant with POST method

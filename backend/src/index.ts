@@ -3,8 +3,9 @@ import { v2 as cloudinary } from 'cloudinary';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import chalk from 'chalk';
-import connectDB from './database/connect.js';
-import myUserRoutes from './routes/user.route.js';
+import connectDB from './database/connect';
+import myUserRoute from './routes/user.route';
+import myRestaurantRoute from './routes/restaurant.route';
 
 dotenv.config();
 
@@ -31,7 +32,8 @@ app.get('/health', async (req: Request, res: Response) => {
 
 await connectDB();
 
-app.use('/api/v1/my/user', myUserRoutes);
+app.use('/api/v1/my/user', myUserRoute);
+app.use('/api/v1/my/restaurant', myRestaurantRoute);
 
 app.listen(PORT, () => {
   console.log(chalk.green(`Server is running on port ${PORT}`));

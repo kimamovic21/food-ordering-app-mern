@@ -3,12 +3,12 @@ import {
   getCurrentUser,
   createCurrentUser,
   updateCurrentUser
-} from '../controllers/user.controller.js';
+} from '../controllers/user.controller';
 import {
   jwtCheck,
   jwtParse
-} from '../middlewares/auth.middleware.js';
-import { validateMyUserRequest } from '../middlewares/validation.middleware.js';
+} from '../middlewares/auth.middleware';
+import { validateMyUserRequest } from '../middlewares/validation.middleware';
 
 const router = Router();
 
