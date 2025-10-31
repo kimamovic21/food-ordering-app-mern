@@ -466,3 +466,18 @@ Get my restaurant API
 -in folder backend,  n restaurant.controller.ts file create and export async function getMyRestaurant()
 -in restaurant.routes.ts file invoke function router.get()
 -import function getMyRestaurant
+
+
+Pre-populate restaurant form
+
+-in component MyRestaurantApi.tsx create and export function export const useGetMyRestaurant
+-in component ManageRestaurantPage.tsx import and invoke function useGetMyRestaurant()
+-in component ManageRestaurantForm.tsx add to function ManageRestaurantForm() prop restaurant
+-import and invoke function useEffect()
+-open route: http://localhost:5173/manage-restaurant and click button Submit
+-open MongoDB to see saved restaurant
+-open Cloudinary to see saved restaurant image
+-open link: https://ui.shadcn.com/docs/components/aspect-ratio
+-type command: npx shadcn@latest add aspect-ratio
+-update component ImageSection.tsx to display and existing restaurant image
+-update component ProtectedRoute.tsx
