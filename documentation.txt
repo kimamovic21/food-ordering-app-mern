@@ -447,3 +447,15 @@ Create restaurant form
 -create component LoadingButton.tsx
 -in component ManageRestaurantForm.tsx import component LoadingButton
 -open route: http://localhost:5173/manage-restaurant and click button Submit
+
+
+Create Restaurant API Request
+
+-in component ManageRestaurantForm.tsx, add logic for form submission in function onSubmit()
+-create component MyRestaurantApi.tsx
+-in MyRestaurantApi.tsx file create and export function useCreateMyRestaurant()
+-in types.ts file create and export types MenuItem and Restaurant
+-in component ManageRestaurantPage.tsx import and invoke function useCreateMyRestaurant
+-open route: http://localhost:5173/manage-restaurant and click button Submit
+-open MongoDB to see saved restaurant
+-open Cloudinary to see saved restaurant image
