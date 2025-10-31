@@ -459,3 +459,10 @@ Create Restaurant API Request
 -open route: http://localhost:5173/manage-restaurant and click button Submit
 -open MongoDB to see saved restaurant
 -open Cloudinary to see saved restaurant image
+
+
+Get my restaurant API
+
+-in folder backend,  n restaurant.controller.ts file create and export async function getMyRestaurant()
+-in restaurant.routes.ts file invoke function router.get()
+-import function getMyRestaurant
