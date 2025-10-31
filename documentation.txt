@@ -481,3 +481,10 @@ Pre-populate restaurant form
 -type command: npx shadcn@latest add aspect-ratio
 -update component ImageSection.tsx to display and existing restaurant image
 -update component ProtectedRoute.tsx
+
+
+Update my restaurant API
+
+-in restaurant.controller.ts file create and export async function updateMyRestaurant()
+-in restaurant.route.ts file import function updateMyRestaurant
+-invoke function router.put() for updating restaurant
