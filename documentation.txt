@@ -507,3 +507,14 @@ Search API
 -in index.ts file import variable searchRestaurantRoute from search-restaurant.route.ts file
 -open route: http://localhost:5173/manage-restaurant
 -open Postman and test endpoint {{BASE_URL}}/api/v1/restaurant/search/test with GET method
+
+
+Search bar component
+
+-in folder shared create component SearchBar.tsx
+-in component SearchBar.tsx add logic for searching restaurant
+-in component HomePage.tsx import component SearchBar.tsx
+-in folder pages create component SearchPage.tsx
+-in component AppRoutes.tsx import component SearchPage.tsx
+-in tsx add component Route for component SearchPage
+-open route: http://localhost:5173 and type city or town
