@@ -495,3 +495,15 @@ Update my restaurant API request
 -in component MyRestaurantApi.tsx create and export function useUpdateMyRestaurant()
 -in component ManageRestaurantPage.tsx import and invoke function useUpdateMyRestaurant()
 -in component ManageRestaurantForm.tsx update logic for storing a restaurant image
+
+
+Search API
+
+-create search-restaurant.controller.ts file
+-in search-restaurant.controller.ts file create and export async function searchRestaurant()
+-create search-restaurant.route.ts file
+-in search-restaurant.route.ts file import function searchRestaurant
+-invoke function router.get() for function searchRestaurant
+-in index.ts file import variable searchRestaurantRoute from search-restaurant.route.ts file
+-open route: http://localhost:5173/manage-restaurant
+-open Postman and test endpoint {{BASE_URL}}/api/v1/restaurant/search/test with GET method
