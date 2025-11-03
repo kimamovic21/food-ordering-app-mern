@@ -518,3 +518,14 @@ Search bar component
 -in component AppRoutes.tsx import component SearchPage.tsx
 -in tsx add component Route for component SearchPage
 -open route: http://localhost:5173 and type city or town
+
+
+Search page API request
+
+-in folder api create component SearchRestaurantApi.tsx
+-in component SearchRestaurantApi.tsx create and export function useSearchRestaurant()
+-in component SearchPage.tsx import and invoke function useSearchRestaurant()
+-in types.ts file create and export type RestaurantSearchResponse
+-in component SearchRestaurantApi.tsx import type RestaurantSearchResponse
+-open route: http://localhost:5173 and type city or town
+-open route: http://localhost:5173/search/test
