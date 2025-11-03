@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import SearchBar, { type SearchForm } from '@/components/shared/SearchBar';
+import SearchBar, { type SearchForm } from '@/components/search/SearchBar';
 import landingImage from '../assets/landing.png';
 import appDownloadImage from '../assets/appDownload.png';
 

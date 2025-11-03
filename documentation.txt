@@ -550,3 +550,18 @@ Restaurant test data
 -open route: http://localhost:5173 and type city or town
 -open route: http://localhost:5173/search/london
 -open route: http://localhost:5173/search/manchester
+
+
+Search filter
+
+-in component SearchPage.tsx create and export type SearchState
+-import and invoke function useState()
+-in component SearchPage.tsx import component SearchBar and type SearchForm
+-create functions setSearchQuery() and resetSearch()
+-in tsx add component SearchBar with props
+-in component SearchRestaurantApi.tsx update function useSearchRestaurant()
+-open route: http://localhost:5173 and type city or town
+-open route: http://localhost:5173/search/london
+-open route: http://localhost:5173/search/manchester
+-search for cuisine and click button Search
+-click button Reset
