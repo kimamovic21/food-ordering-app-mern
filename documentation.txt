@@ -572,7 +572,8 @@ Pagination component
 -open link: https://ui.shadcn.com/docs/components/pagination
 -type command: npx shadcn@latest add pagination
 -in folder components create folder pagination and component PaginationSelector.tsx
--in component PaginationSelector.tsx add logic for pagination
+-in component PaginationSelector.tsx import pagination components from component pagination.tsx
+-add logic for pagination
 -in component SearchPage.tsx import component PaginationSelector
 -update type Props and function useState()
 -in tsx add component PaginationSelector with props
@@ -583,3 +584,23 @@ Pagination component
 -open route: http://localhost:5173/search/london
 -open route: http://localhost:5173/search/manchester
 -search for cuisine and click button Search
+
+
+Cuisines filter
+
+-create folder cuisines and component CuisineFilter.tsx
+-import array cuisineList from restaurant-options-config.ts file
+-in tsx create HTML elements with Tailwind CSS classes
+-import components Check and Label
+-create function handleCuisinesChange()
+-input type ChangeEvent
+-add logic for displaying cuisines list
+-in component SearchPage.tsx update type Props and function useState()
+-create function setSelectedCuisines
+-in component SearchPage.tsx import component CuisineFilter.tsx
+-in tsx add component CuisineFilter with props
+-in component SearchRestaurantApi.tsx invoke function params.set() for query selectedCuisines
+-in component SearchBar.tsx update Tailwind CSS classes
+-in component SearchPage.tsx invoke function useState() for expanding cuisines list
+-open route: http://localhost:5173 and type city or town
+-filter restaurants by cuisine
