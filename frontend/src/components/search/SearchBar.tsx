@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
@@ -10,7 +11,6 @@ import { Search } from 'lucide-react';
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import z from 'zod';
-import { useEffect } from 'react';
 
 const formSchema = z.object({
   searchQuery: z.string({

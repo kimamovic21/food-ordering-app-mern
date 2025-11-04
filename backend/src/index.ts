@@ -3,7 +3,7 @@ import { v2 as cloudinary } from 'cloudinary';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import chalk from 'chalk';
-import connectDB from './database/connect.js';
+import connectDB from './database/connect';
 import myUserRoute from './routes/user.route';
 import myRestaurantRoute from './routes/restaurant.route';
 import searchRestaurantRoute from './routes/search-restaurant.route';

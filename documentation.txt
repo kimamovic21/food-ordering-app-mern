@@ -618,3 +618,11 @@ Sort options filter
 -in component SearchRestaurantApi.tsx invoke function params.set() for query sortOption
 -open route: http://localhost:5173 and type city or town
 -click button for sort option
+
+
+Search feature deploy 
+
+-fix types errors in components ManageRestaurantForm.tsx and ManageRestaurantPage.tsx
+-open link: https://www.npmjs.com/package/fix-esm-import-path
+-open folder backend and type command: npm i fix-esm-import-path --save-dev
+-in package.json file update command build
