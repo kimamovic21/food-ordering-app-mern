@@ -604,3 +604,17 @@ Cuisines filter
 -in component SearchPage.tsx invoke function useState() for expanding cuisines list
 -open route: http://localhost:5173 and type city or town
 -filter restaurants by cuisine
+
+
+Sort options filter
+
+-create folder sort and component SortOptionsDropdown.tsx
+-in component SortOptionsDropdown.tsx import dropdown components from component dropdown-menu.tsx
+-add logic for displaying sorting options
+-in component SearchPage.tsx update type and function useState()
+-create function setSortOption()
+-in component SearchPage.tsx import component SortOptionsDropdown
+-in tsx add component SortOptionsDropdown with props
+-in component SearchRestaurantApi.tsx invoke function params.set() for query sortOption
+-open route: http://localhost:5173 and type city or town
+-click button for sort option
