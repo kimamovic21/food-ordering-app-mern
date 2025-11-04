@@ -565,3 +565,21 @@ Search filter
 -open route: http://localhost:5173/search/manchester
 -search for cuisine and click button Search
 -click button Reset
+
+
+Pagination component
+
+-open link: https://ui.shadcn.com/docs/components/pagination
+-type command: npx shadcn@latest add pagination
+-in folder components create folder pagination and component PaginationSelector.tsx
+-in component PaginationSelector.tsx add logic for pagination
+-in component SearchPage.tsx import component PaginationSelector
+-update type Props and function useState()
+-in tsx add component PaginationSelector with props
+-create function setPage()
+-in component SearchRestaurantApi.tsx invoke function params.set()
+-in component PaginationSelector.tsx update functions setSearchQuery() and resetSearch()
+-open route: http://localhost:5173 and type city or town
+-open route: http://localhost:5173/search/london
+-open route: http://localhost:5173/search/manchester
+-search for cuisine and click button Search
