@@ -672,3 +672,12 @@ Add to cart
 -in component RestaurantDetailsPage.tsx create function addToCart()
 -update component MenuItemDetail.tsx
 -open route: http://localhost:5173/detail/[restaurantId] and click menu item
+
+
+Remove from cart
+
+-in component RestaurantDetailsPage.tsx create function removeFromCart()
+-in tsx add to component OrderSummary prop removeFromCart
+-in component OrderSummary.tsx update type Props and function OrderSummary()
+-import component Trash from package lucide-react
+-open route: http://localhost:5173/detail/[restaurantId] and click Trash icon

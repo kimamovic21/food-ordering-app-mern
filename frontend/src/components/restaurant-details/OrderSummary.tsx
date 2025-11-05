@@ -1,3 +1,4 @@
+import { Trash } from 'lucide-react';
 import type { Restaurant } from '@/types';
 import type { CartItem } from '@/pages/RestaurantDetailsPage';
 import { CardContent, CardHeader, CardTitle } from '../ui/card';
@@ -7,9 +8,14 @@ import { Separator } from '../ui/separator';
 type Props = {
   restaurant: Restaurant;
   cartItems: CartItem[];
+  removeFromCart: (cartItem: CartItem) => void;
 };
 
-const OrderSummary = ({ restaurant, cartItems }: Props) => {
+const OrderSummary = ({
+  restaurant,
+  cartItems,
+  removeFromCart
+}: Props) => {
   const getTotalCost = () => {
     const totalPriceInPence = cartItems.reduce(
       (total, cartItem) => total + cartItem.price * cartItem.quantity,
@@ -32,17 +38,26 @@ const OrderSummary = ({ restaurant, cartItems }: Props) => {
 
       <CardContent className='flex flex-col gap-5'>
         {cartItems?.map((cartItem) => (
-          <div key={cartItem._id} className='flex justify-between'>
-            <div>
-              <Badge variant='outline' className='mr-2'>
+          <div key={cartItem._id} className='flex justify-between items-center w-full'>
+            <div className='flex items-center gap-2'>
+              <Badge variant='outline'>
                 {cartItem.quantity}
               </Badge>
 
-              <span>
+              <div>
                 {cartItem.name}
-              </span>
+              </div>
+            </div>
 
-              <span className='flex items-center gap-1'>
+            <div className='flex items-center gap-2'>
+              <Trash
+                className='cursor-pointer'
+                color='red'
+                size={20}
+                onClick={() => removeFromCart(cartItem)}
+              />
+
+              <span>
                 ${((cartItem.price * cartItem.quantity) / 100).toFixed(2)}
               </span>
             </div>
@@ -53,7 +68,10 @@ const OrderSummary = ({ restaurant, cartItems }: Props) => {
 
         <div className='flex justify-between'>
           <span>Delivery</span>
-          <span>${(restaurant.deliveryPrice / 100).toFixed(2)}</span>
+
+          <span>
+            ${(restaurant.deliveryPrice / 100).toFixed(2)}
+          </span>
         </div>
       </CardContent>
     </>
