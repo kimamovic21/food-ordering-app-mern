@@ -658,3 +658,17 @@ Detail page & menu items
 -import card components from component card.tsx
 -in component RestaurantDetailsPage.tsx import component MenuItemDetail
 -open route: http://localhost:5173/detail/[restaurantId]
+
+
+Add to cart
+
+-in component RestaurantDetailsPage.tsx create and export type CartItem
+-import and invoke function useState()
+-in component restaurant-details create component OrderSummary.tsx
+-in component OrderSummary.tsx import card components from component card.tsx
+-in component RestaurantDetailsPage.tsx import component OrderSummary
+-open link: https://ui.shadcn.com/docs/components/badge
+-type command: npx shadcn@latest add badge
+-in component RestaurantDetailsPage.tsx create function addToCart()
+-update component MenuItemDetail.tsx
+-open route: http://localhost:5173/detail/[restaurantId] and click menu item

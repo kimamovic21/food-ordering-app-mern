@@ -7,12 +7,13 @@ import {
 } from '../ui/card';
 
 type MenuItemDetailProps = {
-  menuItem: MenuItem
+  menuItem: MenuItem;
+  addToCart: () => void;
 };
 
-const MenuItemDetail = ({ menuItem }: MenuItemDetailProps) => {
+const MenuItemDetail = ({ menuItem, addToCart }: MenuItemDetailProps) => {
   return (
-    <Card className='cursor-pointer'>
+    <Card className='cursor-pointer' onClick={addToCart}>
       <CardHeader>
         <CardTitle>
           {menuItem.name}
