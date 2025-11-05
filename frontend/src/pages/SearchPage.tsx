@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSearchRestaurant } from '@/api/SearchRestaurantApi';
+import { useSearchRestaurant } from '@/api/RestaurantApi';
 import SearchBar, { type SearchForm } from '@/components/search/SearchBar';
 import SearchResultInfo from '@/components/search/SearchResultInfo';
 import SearchResultCard from '@/components/search/SearchResultCard';
@@ -113,7 +113,10 @@ const SearchPage = () => {
         </div>
 
         {restaurants.data?.map((restaurant) => (
-          <SearchResultCard restaurant={restaurant} />
+          <SearchResultCard 
+            key={restaurant._id}
+            restaurant={restaurant} 
+          />
         ))}
 
         <PaginationSelector

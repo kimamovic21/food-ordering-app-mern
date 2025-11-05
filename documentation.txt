@@ -626,3 +626,35 @@ Search feature deploy
 -open link: https://www.npmjs.com/package/fix-esm-import-path
 -open folder backend and type command: npm i fix-esm-import-path --save-dev
 -in package.json file update command build
+
+
+Detail page & menu items
+
+-in folder backend rename files
+-update imports in index.ts file
+-in restaurant.controller.ts file create and export async function getRestaurant()
+-in restaurant.route.ts file import function getRestaurant
+-invoke function router.get() for function getRestaurant
+-update shadcn components in folder ui
+-create files button-variants.ts and use-form-field.ts 
+-update eslint.config.js file
+-in folder frontend rename component SearchRestaurantApi.tsx to RestaurantApi.tsx
+-in component RestaurantApi.tsx create and export function useGetRestaurant()
+-in folder pages create component RestaurantDetailsPage.tsx
+-in component RestaurantDetailsPage.tsx import function useGetRestaurant and useParams
+-import component AspectRatio
+-in tsx create HTML elements with Tailwind CSS classes
+-in component AppRoutes.tsx import component RestaurantDetailsPage
+-in tsx add component Route for component RestaurantDetailsPage
+-open link: https://ui.shadcn.com/docs/components/card
+-type command: npx shadcn@latest add card
+-create folder restaurant-details and component RestaurantInfo.tsx
+-in component RestaurantInfo.tsx import card components from component card.tsx
+-import type Restaurant and create type Props
+-in component RestaurantDetailsPage.tsx import component RestaurantInfo
+-in tsx create HTML elements with Tailwind CSS classes
+-in folder restaurant-details create component MenuItemDetail.tsx
+-in component MenuItemDetail.tsx import type MenuItem and create type Props
+-import card components from component card.tsx
+-in component RestaurantDetailsPage.tsx import component MenuItemDetail
+-open route: http://localhost:5173/detail/[restaurantId]

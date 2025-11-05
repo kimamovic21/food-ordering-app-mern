@@ -45,6 +45,7 @@ const SortOptionsDropdown = ({
       <DropdownMenuContent>
         {SORT_OPTIONS.map((option) => (
           <DropdownMenuItem
+            key={option.value}
             className='cursor-pointer'
             onClick={() => onChange(option.value)}
           >

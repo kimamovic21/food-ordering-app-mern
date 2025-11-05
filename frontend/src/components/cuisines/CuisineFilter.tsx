@@ -57,7 +57,9 @@ const CuisineFilter = ({
             const isSelected = selectedCuisines.includes(cuisine);
 
             return (
-              <div className='flex'>
+              <div
+                key={cuisine}
+                className='flex'>
                 <input
                   id={`cuisine_${cuisine}`}
                   type='checkbox'

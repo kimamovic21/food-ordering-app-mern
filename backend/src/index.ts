@@ -5,8 +5,8 @@ import dotenv from 'dotenv';
 import chalk from 'chalk';
 import connectDB from './database/connect';
 import myUserRoute from './routes/user.route';
-import myRestaurantRoute from './routes/restaurant.route';
-import searchRestaurantRoute from './routes/search-restaurant.route';
+import myRestaurantRoute from './routes/myRestaurant.route';
+import restaurantRoute from './routes/restaurant.route';
 
 dotenv.config();
 
@@ -35,7 +35,7 @@ await connectDB();
 
 app.use('/api/v1/my/user', myUserRoute);
 app.use('/api/v1/my/restaurant', myRestaurantRoute);
-app.use('/api/v1/restaurant', searchRestaurantRoute);
+app.use('/api/v1/restaurant', restaurantRoute);
 
 app.listen(PORT, () => {
   console.log(chalk.green(`Server is running on port ${PORT}`));
