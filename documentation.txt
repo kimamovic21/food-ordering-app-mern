@@ -545,7 +545,7 @@ Search page layout
 
 Restaurant test data
 
--in folder backed create restaurant_data.json file
+-in folder backend create restaurant_data.json file
 -in MongoDB Compass import restaurant_data.json file in restaurant collection
 -open route: http://localhost:5173 and type city or town
 -open route: http://localhost:5173/search/london
@@ -726,3 +726,12 @@ Update user profile form
 
 -in component UserProfileForm.tsx update type Props and function UserProfileForm()
 -in component CheckoutButton.tsx, in tsx update component UserProfileForm with props
+
+
+Payments flow overview & Stripe setup
+
+-open link: https://stripe.com
+-open Stripe dashboard and create new project
+-in folder backend type command: npm i stripe
+-in .env file create variables FRONTEND_URL and STRIPE_API_KEY
+-add your env variables in your backend folder hosted on Render
