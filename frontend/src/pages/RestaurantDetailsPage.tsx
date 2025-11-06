@@ -4,6 +4,7 @@ import { useGetRestaurant } from '@/api/RestaurantApi';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card, CardFooter } from '@/components/ui/card';
 import type { MenuItem } from '@/types';
+import type { UserFormData } from '../forms/user-profile-form/UserProfileForm';
 import RestaurantInfo from '@/components/restaurant-details/RestaurantInfo';
 import MenuItemDetail from '@/components/restaurant-details/MenuItemDetail';
 import OrderSummary from '@/components/restaurant-details/OrderSummary';
@@ -84,6 +85,10 @@ const DetailPage = () => {
     );
   };
 
+  const onCheckout = (userFormData: UserFormData) => {
+    console.log('userFormData', userFormData);
+  };
+
   return (
     <section className='flex flex-col gap-10'>
       <AspectRatio ratio={16 / 5}>
@@ -104,6 +109,7 @@ const DetailPage = () => {
 
           {restaurant.menuItems.map((menuItem) => (
             <MenuItemDetail
+              key={menuItem._id}
               menuItem={menuItem}
               addToCart={() => addToCart(menuItem)}
             />
@@ -119,7 +125,10 @@ const DetailPage = () => {
             />
 
             <CardFooter>
-              <CheckoutButton />
+              <CheckoutButton
+                disabled={cartItems.length === 0}
+                onCheckout={onCheckout}
+              />
             </CardFooter>
           </Card>
         </div>

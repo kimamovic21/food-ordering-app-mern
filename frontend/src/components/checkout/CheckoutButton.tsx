@@ -1,9 +1,24 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { useLocation } from 'react-router-dom';
+import { useGetMyUser } from '@/api/MyUserApi';
 import { Button } from '../ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger
+} from '../ui/dialog';
+import UserProfileForm, {
+  type UserFormData
+} from '@/forms/user-profile-form/UserProfileForm';
 import LoadingButton from './LoadingButton';
 
-const CheckoutButton = () => {
+type Props = {
+  onCheckout: (userFormData: UserFormData) => void;
+  disabled: boolean;
+};
+
+const CheckoutButton = ({ onCheckout, disabled }: Props) => {
   const {
     isAuthenticated,
     isLoading: isAuthLoading,
@@ -11,6 +26,11 @@ const CheckoutButton = () => {
   } = useAuth0();
 
   const { pathname } = useLocation();
+
+  const {
+    currentUser,
+    isLoading: isGetUserLoading,
+  } = useGetMyUser();
 
   const onLogin = async () => {
     await loginWithRedirect({
@@ -31,12 +51,32 @@ const CheckoutButton = () => {
     );
   };
 
-  if (isAuthLoading) {
+  if (isAuthLoading || !currentUser) {
     return <LoadingButton />
   };
 
   return (
-    <div>CheckoutButton</div>
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button 
+          disabled={disabled} 
+          className='bg-orange-500 flex-1 cursor-pointer'
+        >
+          Go to checkout
+        </Button>
+      </DialogTrigger>
+
+      <DialogContent className='max-w-[425px] md:min-w-[700px] bg-gray-50'>
+        <DialogTitle className='hidden'>
+          Checkout form
+        </DialogTitle>
+        <UserProfileForm
+          currentUser={currentUser}
+          onSave={onCheckout}
+          isLoading={isGetUserLoading}
+        />
+      </DialogContent>
+    </Dialog>
   );
 };
 

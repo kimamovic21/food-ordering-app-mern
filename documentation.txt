@@ -700,3 +700,23 @@ Checkout button
 -in component RestaurantDetailsPage.tsx invoke function sessionStorage.setItem()
 -update function useState()
 -open route: http://localhost:5173/detail/[restaurantId]
+
+
+Confirm delivery details
+
+-open link: https://ui.shadcn.com/docs/components/dialog
+-type command: npx shadcn@latest add dialog
+-in component CheckoutButton.tsx import dialog components from component dialog.tsx
+-in tsx add dialog components
+-import component UserProfileForm
+-import and invoke function useGetMyUser()
+-in tsx add component UserProfileForm with props
+-update condition if (isAuthLoading || !currentUser)
+-in component UserProfileForm.tsx export type UserFormData
+-in component CheckoutButton.tsx import type UserFormData
+-in component RestaurantDetailsPage.tsx import type UserFormData
+-create function onCheckout()
+-in tsx add to to component CheckoutButton props
+-open route: http://localhost:5173/detail/[restaurantId] and items to cart
+-click button Go to checkout
+-click button Submit
