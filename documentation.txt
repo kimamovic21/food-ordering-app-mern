@@ -772,3 +772,19 @@ Redirect to Stripe
 -add your info and click button Pay
 -open project in Stripe dashboard to see payments
 -open route: http://localhost:5173
+
+
+Create order
+
+-in folder model create order.ts file and Order model
+-in order.controller.ts file import model Order
+-update function createCheckoutSession() to save order
+-open route: http://localhost:5173/detail/[restaurantId] and add items to the cart
+-click button Go to checkout button
+-click button Continue to payment
+-open link: https://checkout.stripe.com/c/pay/cs_test_[paymentId]
+-open link: https://docs.stripe.com/testing
+-add your info and click button Pay
+-open project in Stripe dashboard to see payments
+-open route: http://localhost:5173
+-open MongoDB to see saved order
