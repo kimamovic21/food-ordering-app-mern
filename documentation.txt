@@ -717,7 +717,7 @@ Confirm delivery details
 -in component RestaurantDetailsPage.tsx import type UserFormData
 -create function onCheckout()
 -in tsx add to to component CheckoutButton props
--open route: http://localhost:5173/detail/[restaurantId] and items to cart
+-open route: http://localhost:5173/detail/[restaurantId] and add items to the cart
 -click button Go to checkout
 -click button Submit
 
@@ -751,3 +751,24 @@ Create session API
 -create function createSession()
 -in index.ts file import variable orderRoute from order.route.ts file
 -invoke function app.use() for variable orderRoute
+
+
+Redirect to Stripe
+
+-in folder frontend, in folder api create component OrderApi.tsx
+-in component OrderApi.tsx create and export function useCreateCheckoutSession()
+-create async function createCheckoutSessionRequest()
+-import and invoke functions useAuth0(), useMutation() and toast()
+-create type type CheckoutSessionRequest
+-in component RestaurantDetailsPage.tsx import and invoke function useCreateCheckoutSession()
+-update function onCheckout()
+-in tsx add to component CheckoutButton prop isCheckoutSessionLoading
+-in component CheckoutButton.tsx update type Props and function CheckoutButton()
+-open route: http://localhost:5173/detail/[restaurantId] and add items to the cart
+-click button Go to checkout button
+-click button Continue to payment
+-open link: https://checkout.stripe.com/c/pay/cs_test_[paymentId]
+-open link: https://docs.stripe.com/testing
+-add your info and click button Pay
+-open project in Stripe dashboard to see payments
+-open route: http://localhost:5173
