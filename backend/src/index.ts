@@ -7,6 +7,7 @@ import connectDB from './database/connect';
 import myUserRoute from './routes/user.route';
 import myRestaurantRoute from './routes/myRestaurant.route';
 import restaurantRoute from './routes/restaurant.route';
+import orderRoute from './routes/order.route';
 
 dotenv.config();
 
@@ -36,6 +37,7 @@ await connectDB();
 app.use('/api/v1/my/user', myUserRoute);
 app.use('/api/v1/my/restaurant', myRestaurantRoute);
 app.use('/api/v1/restaurant', restaurantRoute);
+app.use('/api/v1/order', orderRoute);
 
 app.listen(PORT, () => {
   console.log(chalk.green(`Server is running on port ${PORT}`));

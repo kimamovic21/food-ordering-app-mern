@@ -735,3 +735,19 @@ Payments flow overview & Stripe setup
 -in folder backend type command: npm i stripe
 -in .env file create variables FRONTEND_URL and STRIPE_API_KEY
 -add your env variables in your backend folder hosted on Render
+
+
+Create session API
+
+-in folder controllers create order.controller.ts file
+-in order.controller.ts file create and export async function createCheckoutSession()
+-in folder routes create order.route.ts file
+-in order.route.ts file import functions createCheckoutSession, jwtCheck, jwtParse
+-invoke function router.post() for function createCheckoutSession
+-in order.controller.ts file create type CheckoutSessionRequest
+-create function createLineItems()
+-in restaurant.ts file create and export type MenuItemType
+-in order.controller.ts file import type MenuItemType
+-create function createSession()
+-in index.ts file import variable orderRoute from order.route.ts file
+-invoke function app.use() for variable orderRoute
