@@ -681,3 +681,22 @@ Remove from cart
 -in component OrderSummary.tsx update type Props and function OrderSummary()
 -import component Trash from package lucide-react
 -open route: http://localhost:5173/detail/[restaurantId] and click Trash icon
+
+
+Checkout button
+
+-create folder checkout and component CheckoutButton.tsx
+-in component CheckoutButton.tsx import and invoke function useAuth0()
+-in component RestaurantDetailsPage.tsx import component CheckoutButton
+-in tsx add component CheckoutButton with props
+-import and invoke function useLocation()
+-create function onLogin
+-add condition if (!isAuthenticated)
+-create component LoadingButton.tsx
+-in component CheckoutButton.tsx import component LoadingButton
+-add condition if (isAuthLoading)
+-in component Auth0ProviderWithNavigate.tsx import type AppState
+-update function onRedirectCallback()
+-in component RestaurantDetailsPage.tsx invoke function sessionStorage.setItem()
+-update function useState()
+-open route: http://localhost:5173/detail/[restaurantId]

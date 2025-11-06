@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useGetRestaurant } from '@/api/RestaurantApi';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Card } from '@/components/ui/card';
+import { Card, CardFooter } from '@/components/ui/card';
 import type { MenuItem } from '@/types';
 import RestaurantInfo from '@/components/restaurant-details/RestaurantInfo';
 import MenuItemDetail from '@/components/restaurant-details/MenuItemDetail';
 import OrderSummary from '@/components/restaurant-details/OrderSummary';
+import CheckoutButton from '@/components/checkout/CheckoutButton';
 
 export type CartItem = {
   _id: string;
@@ -20,7 +21,11 @@ const DetailPage = () => {
 
   const { restaurant, isLoading, error } = useGetRestaurant(restaurantId);
 
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+    const storedCartItems = sessionStorage.getItem(`cartItems-${restaurantId}`);
+
+    return storedCartItems ? JSON.parse(storedCartItems) : [];
+  });
 
   const addToCart = (menuItem: MenuItem) => {
     setCartItems((prevCartItems) => {
@@ -47,6 +52,11 @@ const DetailPage = () => {
           },
         ];
       };
+
+      sessionStorage.setItem(
+        `cartItems-${restaurantId}`,
+        JSON.stringify(updatedCartItems)
+      );
 
       return updatedCartItems;
     });
@@ -107,6 +117,10 @@ const DetailPage = () => {
               cartItems={cartItems}
               removeFromCart={removeFromCart}
             />
+
+            <CardFooter>
+              <CheckoutButton />
+            </CardFooter>
           </Card>
         </div>
       </div>
