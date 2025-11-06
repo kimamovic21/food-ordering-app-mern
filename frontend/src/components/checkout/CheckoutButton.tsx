@@ -58,8 +58,8 @@ const CheckoutButton = ({ onCheckout, disabled }: Props) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button 
-          disabled={disabled} 
+        <Button
+          disabled={disabled}
           className='bg-orange-500 flex-1 cursor-pointer'
         >
           Go to checkout
@@ -70,10 +70,13 @@ const CheckoutButton = ({ onCheckout, disabled }: Props) => {
         <DialogTitle className='hidden'>
           Checkout form
         </DialogTitle>
+
         <UserProfileForm
           currentUser={currentUser}
           onSave={onCheckout}
           isLoading={isGetUserLoading}
+          title='Confirm delivery details'
+          buttonText='Continue to payment'
         />
       </DialogContent>
     </Dialog>

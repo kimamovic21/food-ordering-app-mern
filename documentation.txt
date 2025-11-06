@@ -720,3 +720,9 @@ Confirm delivery details
 -open route: http://localhost:5173/detail/[restaurantId] and items to cart
 -click button Go to checkout
 -click button Submit
+
+
+Update user profile form
+
+-in component UserProfileForm.tsx update type Props and function UserProfileForm()
+-in component CheckoutButton.tsx, in tsx update component UserProfileForm with props
