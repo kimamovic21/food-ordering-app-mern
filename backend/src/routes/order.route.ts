@@ -1,6 +1,9 @@
 import { Router } from 'express';
 import { jwtCheck, jwtParse } from '../middlewares/auth.middleware';
-import { createCheckoutSession } from '../controllers/order.controller';
+import {
+  createCheckoutSession,
+  stripeWebhookHandler
+} from '../controllers/order.controller';
 
 const router = Router();
 
@@ -9,6 +12,11 @@ router.post(
   jwtCheck,
   jwtParse,
   createCheckoutSession,
+);
+
+router.post(
+  '/checkout/webhook',
+  stripeWebhookHandler
 );
 
 export default router;

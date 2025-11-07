@@ -788,3 +788,19 @@ Create order
 -open project in Stripe dashboard to see payments
 -open route: http://localhost:5173
 -open MongoDB to see saved order
+
+
+Stripe CLI setup
+
+-open project on Stripe dashboard
+-open link: https://docs.stripe.com/stripe-cli/install
+-download Stripe CLI
+-open command prompt and type command: stripe
+-type command: stripe login
+-type command: stripe listen --forward-to localhost:3000/api/v1/order/checkout/webhook
+-open link: https://docs.stripe.com/webhooks
+-in order.controller.ts file create and export async function stripeWebhookHandler()
+-in order.route.ts file import function stripeWebhookHandler
+-invoke function router.post() for function stripeWebhookHandler()
+-open command prompt and type command: stripe trigger checkout.session.completed
+-update package.json file with command stripe
