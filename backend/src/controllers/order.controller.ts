@@ -7,6 +7,20 @@ const STRIPE = new Stripe(process.env.STRIPE_API_KEY as string);
 const FRONTEND_URL = process.env.FRONTEND_URL as string;
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET as string;
 
+export async function getMyOrders(req: Request, res: Response) {
+  try {
+    const orders = await Order
+      .find({ user: req.userId })
+      .populate('restaurant')
+      .populate('user');
+
+    return res.status(200).json(orders);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Something went wrong!' });
+  };
+};
+
 type CheckoutSessionRequest = {
   cartItems: {
     menuItemId: string;

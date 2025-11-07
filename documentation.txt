@@ -832,3 +832,10 @@ Checkout flow deploy
 -add endpoint URL
 -click button Create destination
 -open app link in production and repeat order and payment order process
+
+
+Get customer orders API 
+
+-in order.controller.ts file create and export async function getMyOrders()
+-in order.route.ts file import function getMyOrders
+-invoke function router.get() for function getMyOrders
