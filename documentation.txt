@@ -804,3 +804,20 @@ Stripe CLI setup
 -invoke function router.post() for function stripeWebhookHandler()
 -open command prompt and type command: stripe trigger checkout.session.completed
 -update package.json file with command stripe
+
+
+Update order in Stripe webhook
+
+-in folder backend, in .env file create variable STRIPE_WEBHOOK_SECRET
+-in order.controller.ts file create variable const STRIPE_WEBHOOK_SECRET
+-update function stripeWebhookHandler() 
+-update env variables in your backend project on Render
+-in index.ts file invoke function app.use() for Stripe webhook route
+-open route: http://localhost:5173/detail/[restaurantId] and add items to the cart
+-click button Go to checkout button
+-click button Continue to payment
+-open link: https://checkout.stripe.com/c/pay/cs_test_[paymentId]
+-add your info and click button Pay
+-open project in Stripe dashboard to see payments
+-open route: http://localhost:5173
+-open MongoDB to see saved order
