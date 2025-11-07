@@ -839,3 +839,11 @@ Get customer orders API
 -in order.controller.ts file create and export async function getMyOrders()
 -in order.route.ts file import function getMyOrders
 -invoke function router.get() for function getMyOrders
+
+
+Get customer orders request 
+
+-in OrderApi.tsx file create and export function useGetMyOrders()
+-import and invoke function useQuery()
+-in types.ts file create and export types Order and OrderStatus
+-in component OrderApi.tsx import type Order
