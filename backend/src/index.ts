@@ -43,7 +43,7 @@ await connectDB();
 app.use('/api/v1/my/user', myUserRoute);
 app.use('/api/v1/my/restaurant', myRestaurantRoute);
 app.use('/api/v1/restaurant', restaurantRoute);
-app.use('/api/v1/order', orderRoute);
+app.use('/api/v1/orders', orderRoute);
 
 app.listen(PORT, () => {
   console.log(chalk.green(`Server is running on port ${PORT}`));

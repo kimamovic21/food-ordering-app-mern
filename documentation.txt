@@ -847,3 +847,20 @@ Get customer orders request
 -import and invoke function useQuery()
 -in types.ts file create and export types Order and OrderStatus
 -in component OrderApi.tsx import type Order
+
+
+Order status page 
+
+-in folder pages create component OrderStatusPage.tsx
+-in component OrderStatusPage.tsx import and invoke function getMyOrders()
+-add if conditions
+-in tsx create HTML elements with Tailwind CSS classes
+-create function getExpectedDelivery()
+-in folder components create folder orders and component OrderStatusHeader.tsx
+-in component AppRoutes.tsx import component OrderStatusPage
+-in tsx add component Route for component OrderStatusPage
+-update components MainNav.tsx and MobileNavLinks.tsx
+-open link: https://ui.shadcn.com/docs/components/progress
+-type command: npx shadcn@latest add progress
+-in component OrderStatusHeader.tsx import component Progress from component progress.tsx
+-open route: http://localhost:5173/orders
