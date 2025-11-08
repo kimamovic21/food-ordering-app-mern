@@ -882,3 +882,11 @@ Order status config
 -in component OrderStatusPage.tsx create div element with Tailwind CSS classes
 -import components OrderStatusDetail and AspectRation
 -open route: http://localhost:5173/orders
+
+
+Restaurant orders API
+
+-in myRestaurant.controller.ts file create and export async function getMyRestaurantOrders()
+-in myRestaurant.route.ts file import function getMyRestaurantOrders
+-invoke function router.get() for function getMyRestaurantOrders
+-in component MyRestaurantApi.tsx create and export function useGetMyRestaurantOrders()

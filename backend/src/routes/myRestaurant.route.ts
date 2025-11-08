@@ -4,7 +4,8 @@ import { validateMyRestaurantRequest } from '../middlewares/validation.middlewar
 import {
   createMyRestaurant,
   getMyRestaurant,
-  updateMyRestaurant
+  updateMyRestaurant,
+  getMyRestaurantOrders
 } from '../controllers/myRestaurant.controller';
 import multer from 'multer';
 
@@ -41,6 +42,14 @@ router.put(
   jwtCheck,
   jwtParse,
   updateMyRestaurant
+);
+
+
+router.get(
+  '/orders',
+  jwtCheck,
+  jwtParse,
+  getMyRestaurantOrders
 );
 
 export default router;
