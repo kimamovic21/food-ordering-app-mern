@@ -864,3 +864,21 @@ Order status page
 -type command: npx shadcn@latest add progress
 -in component OrderStatusHeader.tsx import component Progress from component progress.tsx
 -open route: http://localhost:5173/orders
+
+
+Order status config 
+
+-in folder public add logo image
+-in folder config create order-status-config.ts file
+-in order-status-config.ts file create and export variable const ORDER_STATUS
+-import type OrderStatus
+-create type OrderStatusInfo
+-in component OrderStatusHeader.tsx import array ORDER_STATUS
+-create function getOrderStatusInfo()
+-in tsx invoke function getOrderStatusInfo()
+-create component OrderStatusDetail.tsx
+-in component OrderStatusDetail.tsx import type Order and create type Props
+-in tsx create HTML elements with Tailwind CSS classes
+-in component OrderStatusPage.tsx create div element with Tailwind CSS classes
+-import components OrderStatusDetail and AspectRation
+-open route: http://localhost:5173/orders
