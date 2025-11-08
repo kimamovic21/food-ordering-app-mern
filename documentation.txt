@@ -890,3 +890,20 @@ Restaurant orders API
 -in myRestaurant.route.ts file import function getMyRestaurantOrders
 -invoke function router.get() for function getMyRestaurantOrders
 -in component MyRestaurantApi.tsx create and export function useGetMyRestaurantOrders()
+
+
+Restaurant Orders page
+
+-open link: https://ui.shadcn.com/docs/components/tabs
+-type command: npx shadcn@latest add tabs
+-in component ManageRestaurantPage.tsx update tabs components from component tabs.tsx
+-import and invoke function useGetMyRestaurantOrders()
+-create component OrderItemCard.tsx
+-in component OrderItemCard.tsx import type Order and create type Props
+-create function getTime()
+-open link: https://ui.shadcn.com/docs/components/select
+-type command: npx shadcn@latest add select
+-import shadcn components from folder ui
+-in tsx create HTML elements with Tailwind CSS classes
+-in component ManageRestaurantPage.tsx import component OrderItemCard
+-open route: http://localhost:5173/manage-restaurant
