@@ -907,3 +907,12 @@ Restaurant Orders page
 -in tsx create HTML elements with Tailwind CSS classes
 -in component ManageRestaurantPage.tsx import component OrderItemCard
 -open route: http://localhost:5173/manage-restaurant
+
+
+Update order API 
+
+-in myRestaurant.controller.ts file create and export async function updateOrderStatus()
+-in myRestaurant.route.ts file import function updateOrderStatus
+-invoke function router.patch() for function updateOrderStatus
+-in component MyRestaurantApi.tsx create and export function useUpdateMyRestaurantOrder()
+-create type UpdateOrderStatusRequest

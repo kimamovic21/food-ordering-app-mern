@@ -5,7 +5,8 @@ import {
   createMyRestaurant,
   getMyRestaurant,
   updateMyRestaurant,
-  getMyRestaurantOrders
+  getMyRestaurantOrders,
+  updateOrderStatus
 } from '../controllers/myRestaurant.controller';
 import multer from 'multer';
 
@@ -44,12 +45,18 @@ router.put(
   updateMyRestaurant
 );
 
-
 router.get(
   '/orders',
   jwtCheck,
   jwtParse,
   getMyRestaurantOrders
+);
+
+router.patch(
+  '/order/:orderId/status',
+  jwtCheck,
+  jwtParse,
+  updateOrderStatus
 );
 
 export default router;
