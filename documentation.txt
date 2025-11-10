@@ -916,3 +916,12 @@ Update order API
 -invoke function router.patch() for function updateOrderStatus
 -in component MyRestaurantApi.tsx create and export function useUpdateMyRestaurantOrder()
 -create type UpdateOrderStatusRequest
+
+
+Order item card update status
+
+-in component OrderItemCard.tsx import type OrderStatus
+-import and invoke function useUpdateMyRestaurantOrder()
+-create function handleStatusChange()
+-in tsx add to component Select props value, disabled and onValueChange
+-import and invoke functions useState() and useEffect()
