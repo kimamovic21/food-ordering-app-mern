@@ -17,19 +17,21 @@ const formSchema = z
     restaurantName: z.string().min(1, 'Restaurant name is required!'),
     city: z.string().min(1, 'City is required!'),
     country: z.string().min(1, 'Country is required!'),
-    deliveryPrice: z.number().min(0, 'Delivery price must be a positive number!'),
-    estimatedDeliveryTime: z.number().min(0, 'Estimated delivery time must be a positive number!'),
+    deliveryPrice: z.coerce.number().min(0, 'Delivery price must be a positive number!'),
+    estimatedDeliveryTime: z.coerce.number().min(0, 'Estimated delivery time must be a positive number!'),
     cuisines: z.array(z.string()).nonempty({
       message: 'Please select at least one item!',
     }),
     menuItems: z.array(
       z.object({
         name: z.string().min(1, 'Name is required!'),
-        price: z.number().min(1, 'Price is required!'),
+        price: z.coerce.number().min(1, 'Price is required!'),
       })
     ),
     imageUrl: z.string().optional(),
-    imageFile: z.instanceof(File, { message: 'Image is required!' }).optional(),
+    imageFile: z
+      .instanceof(File, { message: 'Image is required!' })
+      .optional(),
   })
   .refine((data) => data.imageUrl || data.imageFile, {
     message: 'Either image URL or image file is required!',
@@ -81,6 +83,7 @@ const ManageRestaurantForm = ({
       ...restaurant,
       deliveryPrice: deliveryPriceFormatted,
       menuItems: menuItemsFormatted,
+      imageUrl: restaurant.imageUrl ?? '',
     };
 
     form.reset(updatedRestaurant);
@@ -146,12 +149,15 @@ const ManageRestaurantForm = ({
         <Separator />
 
         <MenuSection />
-        
+
         <ImageSection />
         {isLoading ? (
           <LoadingButton />
         ) : (
-          <Button type='submit'>
+          <Button
+            type='submit'
+            onClick={() => console.log(form.formState.errors)}
+          >
             Submit
           </Button>
         )}

@@ -938,3 +938,9 @@ Folder structure update
 -route updates in folder backend
 -components moved fo folder pages
 -shadcn components update in folder ui
+
+
+Manage Restaurant Form update
+
+-create tsconfig.build.json file
+-update files package.json and tsconfig.json
