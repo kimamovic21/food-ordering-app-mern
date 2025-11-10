@@ -138,10 +138,15 @@ const ManageRestaurantForm = ({
         className='space-y-8 bg-gray-50 p-10 rounded-lg'
       >
         <DetailsSection />
+
         <Separator />
+
         <CuisinesSection />
+
         <Separator />
+
         <MenuSection />
+        
         <ImageSection />
         {isLoading ? (
           <LoadingButton />

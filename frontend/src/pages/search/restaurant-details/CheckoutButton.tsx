@@ -1,16 +1,14 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { useLocation } from 'react-router-dom';
 import { useGetMyUser } from '@/api/MyUserApi';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger
-} from '../ui/dialog';
-import UserProfileForm, {
-  type UserFormData
-} from '@/forms/user-profile-form/UserProfileForm';
+} from '@/components/ui/dialog';
+import UserProfileForm, { type UserFormData } from '@/forms/user-profile-form/UserProfileForm';
 import LoadingButton from './LoadingButton';
 
 type Props = {

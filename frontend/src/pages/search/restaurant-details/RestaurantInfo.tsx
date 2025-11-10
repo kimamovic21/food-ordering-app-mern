@@ -1,3 +1,4 @@
+import { Dot } from 'lucide-react';
 import type { Restaurant } from '@/types';
 import {
   Card,
@@ -5,8 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle
-} from '../ui/card';
-import { Dot } from 'lucide-react';
+} from '@/components/ui/card';
 
 type Props = {
   restaurant: Restaurant;

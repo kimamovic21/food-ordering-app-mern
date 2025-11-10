@@ -1,18 +1,23 @@
 import { useEffect, useState } from 'react';
 import type { Order, OrderStatus } from '@/types';
 import { useUpdateMyRestaurantOrder } from '@/api/MyRestaurantApi';
-import { ORDER_STATUS } from '@/config/order-status-config';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-import { Separator } from '../ui/separator';
-import { Badge } from '../ui/badge';
-import { Label } from '../ui/label';
+import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/components/ui/badge';
+import { Label } from '@/components/ui/label';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle
+} from '@/components/ui/card';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue
-} from '../ui/select';
+} from '@/components/ui/select';
+import { ORDER_STATUS } from '@/config/order-status-config';
 
 type Props = {
   order: Order

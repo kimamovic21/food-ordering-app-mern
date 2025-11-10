@@ -59,7 +59,7 @@ export const useCreateCheckoutSession = () => {
     const accessToken = await getAccessTokenSilently();
 
     const response = await fetch(
-      `${API_BASE_URL}/order/checkout/create-checkout-session`, {
+      `${API_BASE_URL}/orders/checkout/create-checkout-session`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${accessToken}`,

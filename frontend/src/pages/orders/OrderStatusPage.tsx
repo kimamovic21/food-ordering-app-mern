@@ -1,7 +1,7 @@
 import { useGetMyOrders } from '@/api/OrderApi';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import OrderStatusHeader from '@/components/orders/OrderStatusHeader';
-import OrderStatusDetail from '@/components/orders/OrderStatusDetail';
+import OrderStatusHeader from './OrderStatusHeader';
+import OrderStatusDetail from './OrderStatusDetail';
 
 const OrderStatusPage = () => {
   const { orders, isLoading } = useGetMyOrders();

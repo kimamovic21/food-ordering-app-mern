@@ -1,8 +1,8 @@
 import type { ChangeEvent } from 'react';
 import { Check, ChevronDown, ChevronUp } from 'lucide-react';
 import { cuisineList } from '@/config/restaurant-options-config';
-import { Label } from '../ui/label';
-import { Button } from '../ui/button';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
 
 type Props = {
   onChange: (cuisines: string[]) => void;

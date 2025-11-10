@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useGetRestaurant } from '@/api/RestaurantApi';
-import { useCreateCheckoutSession } from '@/api/OrderApi';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card, CardFooter } from '@/components/ui/card';
+import { useGetRestaurant } from '@/api/RestaurantApi';
+import { useCreateCheckoutSession } from '@/api/OrderApi';
+import type { UserFormData } from '@/forms/user-profile-form/UserProfileForm';
 import type { MenuItem } from '@/types';
-import type { UserFormData } from '../forms/user-profile-form/UserProfileForm';
-import RestaurantInfo from '@/components/restaurant-details/RestaurantInfo';
-import MenuItemDetail from '@/components/restaurant-details/MenuItemDetail';
-import OrderSummary from '@/components/restaurant-details/OrderSummary';
-import CheckoutButton from '@/components/checkout/CheckoutButton';
+import RestaurantInfo from './RestaurantInfo';
+import MenuItemDetail from './MenuItemDetail';
+import OrderSummary from './OrderSummary';
+import CheckoutButton from './CheckoutButton';
 
 export type CartItem = {
   _id: string;

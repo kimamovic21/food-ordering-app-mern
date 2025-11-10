@@ -22,7 +22,7 @@ const app = express();
 app.use(cors());
 
 app.use(
-  '/api/v1/order/checkout/webhook',
+  '/api/v1/orders/checkout/webhook',
   express.raw({ type: '*/*' }),
 );
 

@@ -1,13 +1,13 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './layouts/layout';
-import HomePage from './pages/HomePage';
-import AuthCallbackPage from './pages/AuthCallbackPage';
-import UserProfilePage from './pages/UserProfilePage';
+import HomePage from './pages/home/HomePage';
+import AuthCallbackPage from './pages/auth/AuthCallbackPage';
 import ProtectedRoute from './auth/ProtectedRoute';
-import ManageRestaurantPage from './pages/ManageRestaurantPage';
-import SearchPage from './pages/SearchPage';
-import RestaurantDetailsPage from './pages/RestaurantDetailsPage';
-import OrderStatusPage from './pages/OrderStatusPage';
+import SearchPage from './pages/search/SearchPage';
+import OrderStatusPage from './pages/orders/OrderStatusPage';
+import ManageRestaurantPage from './pages/manage-restaurant/ManageRestaurantPage';
+import RestaurantDetailsPage from './pages/search/restaurant-details/RestaurantDetailsPage';
+import UserProfilePage from './pages/user-profile/UserProfilePage';
 
 const AppRoutes = () => {
   return (

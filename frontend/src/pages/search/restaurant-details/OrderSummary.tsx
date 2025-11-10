@@ -1,9 +1,9 @@
 import { Trash } from 'lucide-react';
 import type { Restaurant } from '@/types';
-import type { CartItem } from '@/pages/RestaurantDetailsPage';
-import { CardContent, CardHeader, CardTitle } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { Separator } from '../ui/separator';
+import { CardContent, CardHeader, CardTitle } from '../../../components/ui/card';
+import { Badge } from '../../../components/ui/badge';
+import { Separator } from '../../../components/ui/separator';
+import type { CartItem } from './RestaurantDetailsPage';
 
 type Props = {
   restaurant: Restaurant;

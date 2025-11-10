@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSearchRestaurant } from '@/api/RestaurantApi';
-import SearchBar, { type SearchForm } from '@/components/search/SearchBar';
-import SearchResultInfo from '@/components/search/SearchResultInfo';
-import SearchResultCard from '@/components/search/SearchResultCard';
-import PaginationSelector from '@/components/pagination/PaginationSelector';
-import CuisineFilter from '@/components/cuisines/CuisineFilter';
-import SortOptionsDropdown from '@/components/sort/SortOptionsDropdown';
+import SearchBar, { type SearchForm } from './SearchBar';
+import SearchResultInfo from '@/pages/search/SearchResultInfo';
+import SearchResultCard from '@/pages/search/SearchResultCard';
+import PaginationSelector from '@/pages/search/PaginationSelector';
+import SortOptionsDropdown from '@/pages/search/SortOptionsDropdown';
+import CuisineFilter from './CuisineFilter';
 
 export type SearchState = {
   searchQuery: string;
@@ -113,9 +113,9 @@ const SearchPage = () => {
         </div>
 
         {restaurants.data?.map((restaurant) => (
-          <SearchResultCard 
+          <SearchResultCard
             key={restaurant._id}
-            restaurant={restaurant} 
+            restaurant={restaurant}
           />
         ))}
 

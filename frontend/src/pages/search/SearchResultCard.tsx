@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Banknote, Clock, Dot } from 'lucide-react';
-import { AspectRatio } from '../ui/aspect-ratio';
+import { AspectRatio } from '../../components/ui/aspect-ratio';
 import type { Restaurant } from '@/types'
 
 type Props = {

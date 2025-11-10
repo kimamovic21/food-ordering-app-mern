@@ -1,18 +1,18 @@
 import {
   useCreateMyRestaurant,
   useGetMyRestaurant,
-  useUpdateMyRestaurant,
-  useGetMyRestaurantOrders
-} from '../api/MyRestaurantApi';
+  useGetMyRestaurantOrders,
+  useUpdateMyRestaurant
+} from '@/api/MyRestaurantApi';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger
 } from '@/components/ui/tabs';
-import type { Restaurant } from '@/types';
 import ManageRestaurantForm from '@/forms/manage-restaurant-form/ManageRestaurantForm';
-import OrderItemCard from '@/components/orders/OrderItemCard';
+import type { Restaurant } from '@/types';
+import OrderItemCard from './OrderItemCard';
 
 const ManageRestaurantPage = () => {
   const { restaurant } = useGetMyRestaurant();
