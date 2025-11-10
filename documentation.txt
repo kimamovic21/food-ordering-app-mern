@@ -925,3 +925,9 @@ Order item card update status
 -create function handleStatusChange()
 -in tsx add to component Select props value, disabled and onValueChange
 -import and invoke functions useState() and useEffect()
+-open route: http://localhost:5173/manage-restaurant and update order status
+
+
+Order status polling
+
+-in component OrderApi.tsx update function useQuery()
